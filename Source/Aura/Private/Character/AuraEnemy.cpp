@@ -23,8 +23,8 @@ AAuraEnemy::AAuraEnemy()
 void AAuraEnemy::BeginPlay()
 {
 	Super::BeginPlay();
-	AbilitySystemComponent->InitAbilityActorInfo(this, this);
 }
+
 
 void AAuraEnemy::HighlightActor()
 {
@@ -45,6 +45,10 @@ void AAuraEnemy::UnHighlightActor()
 	UE_LOG(LogTemp, Warning, TEXT("UnHighlight"));
 }
 
-
+void AAuraEnemy::InitAbilityActorInfo()
+{
+	AbilitySystemComponent->InitAbilityActorInfo(this, this);
+	Cast<UAuraAbilitySystemComponent>(AbilitySystemComponent)->AbilityActorInfoSet();
+}
 
 

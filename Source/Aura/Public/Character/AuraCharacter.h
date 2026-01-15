@@ -22,6 +22,6 @@ private:
 	/**
 	 * Init ability actor info
 	 */
-	void InitAbilityActorInfo();
+	virtual void InitAbilityActorInfo() override;
 	
 };

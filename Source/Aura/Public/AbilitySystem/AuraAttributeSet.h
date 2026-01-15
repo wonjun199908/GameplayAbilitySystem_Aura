@@ -26,7 +26,6 @@ public:
 
 	UPROPERTY()
 	UAbilitySystemComponent* SourceASC = nullptr;
-	
 	UPROPERTY()
 	AActor* SourceAvatarActor = nullptr;
 
